@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
 import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare, User } from "lucide-react";
 import { Link } from "react-router-dom";
+import { IoMailOutline } from "react-icons/io5";
+import { FaRegUser } from "react-icons/fa";
 
 import AuthImagePattern from "../components/AuthImagePattern";
 import toast from "react-hot-toast";
@@ -58,9 +60,9 @@ const SignUpPage = () => {
               <label className="label">
                 <span className="label-text font-medium">Full Name</span>
               </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <User className="size-5 text-base-content/40" />
+              <div className="relative flex items-center">
+                <div className="absolute z-50  left-0 pl-3 flex items-center pointer-events-none">
+                  <FaRegUser className="h-5 w-5 text-base-content/40" />
                 </div>
                 <input
                   type="text"
@@ -76,9 +78,9 @@ const SignUpPage = () => {
               <label className="label">
                 <span className="label-text font-medium">Email</span>
               </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Mail className="size-5 text-base-content/40" />
+              <div className="relative flex items-center">
+                <div className="absolute z-50 left-0 pl-3 pointer-events-none">
+                  <IoMailOutline className="h-5 w-5 text-base-content/40" />
                 </div>
                 <input
                   type="email"
@@ -95,7 +97,7 @@ const SignUpPage = () => {
                 <span className="label-text font-medium">Password</span>
               </label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <div className="absolute z-50 inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <Lock className="size-5 text-base-content/40" />
                 </div>
                 <input

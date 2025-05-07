@@ -20,7 +20,7 @@ const __dirname = path.resolve();
 app.use(express.json()); // allows us to extract data from the body of the request
 app.use(cookieParser()); // allows us to extract cookies from the request
 app.use(cors({
-    origin:"http://localhost:5174",
+    origin:"http://localhost:5173",
     credentials:true, // allows us to send cookies from the frontend to the backend
 }))
 
